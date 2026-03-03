@@ -49,7 +49,7 @@ const steps = [
   {
     num: 2,
     title: 'We Build Your Setup',
-    desc: 'Our team configures your OpenClaw instance exactly to your specs. Usually done within 24 hours.',
+    desc: 'Our team configures your OpenClaw instance exactly to your specs. Usually done within 90 minutes.',
   },
   {
     num: 3,
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     question: 'How long does setup take?',
-    answer: 'Most setups are completed within 24 hours of receiving your onboarding form.',
+    answer: 'Most setups are completed within 90 minutes of receiving your onboarding form.',
   },
   {
     question: "What if I buy now but I'm not ready yet?",
@@ -96,7 +96,7 @@ const serviceSchema = {
   },
   name: 'Done-For-You OpenClaw Setup',
   description:
-    'We install, configure, and deploy OpenClaw on your VPS in 24 hours. Includes LLM connection, messaging channel setup, custom persona, security hardening, walkthrough call, and 7 days of support.',
+    'We install, configure, and deploy OpenClaw on your VPS in 90 minutes. Includes LLM connection, messaging channel setup, custom persona, security hardening, walkthrough call, and 7 days of support.',
   url: `${BUSINESS.url}/dfysetup/`,
   offers: {
     '@type': 'Offer',
@@ -131,9 +131,9 @@ const breadcrumbSchema = {
 export default function DfySetup() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const title = 'Done-For-You OpenClaw Setup — Live in 24 Hours';
+  const title = 'Done-For-You OpenClaw Setup — Live in 90 Minutes';
   const description =
-    'Done-For-You OpenClaw setup. We install, configure, and deploy your AI assistant on your VPS in 24 hours. One-time payment of $247. No subscription.';
+    'Done-For-You OpenClaw setup. We install, configure, and deploy your AI assistant on your VPS in 90 minutes. One-time payment of $247. No subscription.';
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -174,7 +174,7 @@ export default function DfySetup() {
             </div>
             <h1>
               Your AI Assistant, Set Up and Running in{' '}
-              <span className={styles.highlight}>24 Hours</span>
+              <span className={styles.highlight}>90 Minutes</span>
             </h1>
             <p className={styles.heroSubtitle}>
               We handle everything — installation, configuration, and deployment. You just submit
