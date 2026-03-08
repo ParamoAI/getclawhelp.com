@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-telegram-setup',
+    title: 'Connect OpenClaw to Telegram: Full Integration Guide',
+    description:
+      'Connect OpenClaw to Telegram step by step. Create a bot, configure your gateway, and talk to your AI assistant from any device via Telegram.',
+    date: 'March 3, 2026',
+    readTime: '10 min read',
+  },
+  {
     slug: 'openclaw-setup-service',
     title: 'OpenClaw Setup Service: Get Your AI Assistant Running Today',
     description:
