@@ -3,7 +3,6 @@ import * as path from 'path';
 
 import { SITEMAP } from '../config/sitemap';
 import { BLOG_POSTS } from '../config/blogPosts';
-import { CITIES } from '../config/cities';
 import { INTEGRATIONS } from '../config/integrations';
 import { USE_CASES } from '../config/useCases';
 
@@ -29,11 +28,6 @@ const additionalPages: SitemapEntry[] = [
   ...BLOG_POSTS.map((post) => ({
     path: `/blog/${post.slug}/`,
     priority: 0.7,
-    changefreq: 'monthly' as const,
-  })),
-  ...CITIES.map((city) => ({
-    path: `/cities/${city.slug}/`,
-    priority: 0.6,
     changefreq: 'monthly' as const,
   })),
   ...INTEGRATIONS.map((integration) => ({
