@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-whatsapp-setup',
+    title: 'OpenClaw WhatsApp Setup: Talk to Your AI from Your Phone',
+    description:
+      'Set up OpenClaw with WhatsApp step by step. Connect your AI assistant to WhatsApp using the Baileys provider so you can chat from your phone anywhere.',
+    date: 'March 10, 2026',
+    readTime: '12 min read',
+  },
+  {
     slug: 'openclaw-telegram-setup',
     title: 'Connect OpenClaw to Telegram: Full Integration Guide',
     description:
