@@ -330,6 +330,41 @@
   font-size: 0.875rem;
 }
 
+/* Cities Grid */
+.citiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.cityLink {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cityLink:hover {
+  border-color: rgba(78, 205, 196, 0.4);
+  transform: translateY(-2px);
+}
+
+.cityName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cityCountry {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
 /* Final CTA */
 .finalCta {
   padding: 100px 0;

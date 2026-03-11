@@ -9,11 +9,22 @@ import Layout from '@/components/Layout';
 
 import styles from '@/styles/Article.module.css';
 
-interface CityPageProps {
-  city: City;
+function getRelatedCities(currentSlug: string): City[] {
+  const others = CITIES.filter((c) => c.slug !== currentSlug);
+  const idx = CITIES.findIndex((c) => c.slug === currentSlug);
+  const picked: City[] = [];
+  for (let i = 1; picked.length < 3 && i <= others.length; i++) {
+    picked.push(CITIES[(idx + i) % CITIES.length]);
+  }
+  return picked;
 }
 
-export default function CityPage({ city }: CityPageProps) {
+interface CityPageProps {
+  city: City;
+  relatedCities: City[];
+}
+
+export default function CityPage({ city, relatedCities }: CityPageProps) {
   const title = `AI Assistant Setup in ${city.name} | OpenClaw`;
   const description = city.description;
 
@@ -104,6 +115,22 @@ export default function CityPage({ city }: CityPageProps) {
               Book Your Free Call →
             </a>
           </div>
+
+          <h2>Also Available In</h2>
+          <div className={styles.relatedCities}>
+            {relatedCities.map((rc) => (
+              <Link
+                key={rc.slug}
+                href={`/cities/${rc.slug}/`}
+                className={styles.relatedCityLink}
+              >
+                <span className={styles.relatedCityName}>
+                  AI Assistant Setup in {rc.name}
+                </span>
+                <span className={styles.relatedCityCountry}>{rc.country}</span>
+              </Link>
+            ))}
+          </div>
         </article>
       </Layout>
     </>
@@ -126,5 +153,5 @@ export const getStaticProps: GetStaticProps<CityPageProps> = async ({ params }) 
     return { notFound: true };
   }
 
-  return { props: { city } };
+  return { props: { city, relatedCities: getRelatedCities(city.slug) } };
 };

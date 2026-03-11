@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { BUSINESS } from '@/config';
+import { CITIES } from '@/config/cities';
 
 import { HomeStructuredData } from '@/components/StructuredData';
 import Layout from '@/components/Layout';
@@ -247,6 +248,26 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Available Locations */}
+        <section className={styles.section}>
+          <div className={styles.container}>
+            <p className={styles.sectionLabel}>Available Locations</p>
+            <h2 className={styles.sectionTitle}>Get OpenClaw setup help worldwide</h2>
+            <div className={styles.citiesGrid}>
+              {CITIES.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/cities/${city.slug}/`}
+                  className={styles.cityLink}
+                >
+                  <span className={styles.cityName}>{city.name}</span>
+                  <span className={styles.cityCountry}>{city.country}</span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
