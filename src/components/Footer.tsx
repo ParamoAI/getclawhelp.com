@@ -1,4 +1,7 @@
+import Link from 'next/link';
+
 import { BUSINESS } from '@/config';
+import { CITIES } from '@/config/cities';
 
 import styles from '@/styles/Footer.module.css';
 
@@ -6,6 +9,18 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
+        <nav className={styles.cityNav} aria-label="Available locations">
+          <p className={styles.cityNavTitle}>Available Locations</p>
+          <ul className={styles.cityList}>
+            {CITIES.map((city) => (
+              <li key={city.slug}>
+                <Link href={`/cities/${city.slug}/`}>
+                  {city.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <p>
           Powered by{' '}
           <a href={BUSINESS.parent.url} target="_blank" rel="noopener noreferrer">

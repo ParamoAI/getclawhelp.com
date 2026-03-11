@@ -17,6 +17,41 @@
   text-decoration: none;
 }
 
+.cityNav {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cityNavTitle {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.cityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+
+.cityList li a {
+  color: var(--text-secondary) !important;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.cityList li a:hover {
+  color: var(--teal) !important;
+}
+
 .social {
   margin-top: 12px;
 }
