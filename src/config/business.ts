@@ -4,7 +4,7 @@ export const BUSINESS = {
   url: 'https://getclawhelp.com',
   tagline: 'Get Your AI Running in 30 Min (We Set It Up)',
   description:
-    'Stuck on OpenClaw setup? Book a free 30-min call — we install it on your VPS, configure skills, connect your apps. You watch, we do the work.',
+    'Professional OpenClaw setup service. We install, configure, and deploy your AI assistant on your VPS in 30 minutes. Free setup call — no coding required.',
   social: {
     twitter: '@tipbtdennis',
     twitterUrl: 'https://x.com/tipbtdennis',

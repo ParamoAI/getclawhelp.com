@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { BUSINESS, SEO } from '@/config';
+import { BLOG_POSTS } from '@/config/blogPosts';
 import { CITIES, City } from '@/config/cities';
+import { USE_CASES } from '@/config/useCases';
 
 import Layout from '@/components/Layout';
 
@@ -115,6 +117,28 @@ export default function CityPage({ city, relatedCities }: CityPageProps) {
               Book Your Free Call →
             </a>
           </div>
+
+          <h2>Popular Use Cases in {city.name}</h2>
+          <ul>
+            {USE_CASES.slice(0, 4).map((uc) => (
+              <li key={uc.slug}>
+                <Link href={`/use-cases/${uc.slug}/`}>
+                  {uc.icon} {uc.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <h2>Learn More</h2>
+          <ul>
+            {BLOG_POSTS.slice(0, 3).map((post) => (
+              <li key={post.slug}>
+                <Link href={`/blog/${post.slug}/`}>
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <h2>Also Available In</h2>
           <div className={styles.relatedCities}>

@@ -12,14 +12,17 @@ interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+  canonicalPath?: string;
 }
 
 export default function Layout({
   children,
   title,
   description = SEO.description.default,
+  canonicalPath,
 }: LayoutProps) {
   const pageTitle = SEO.formatTitle(title);
+  const canonicalUrl = canonicalPath ? `${BUSINESS.url}${canonicalPath}` : BUSINESS.url;
 
   return (
     <>
@@ -28,12 +31,12 @@ export default function Layout({
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content={SEO.keywords.join(', ')} />
-        <link rel="canonical" href={BUSINESS.url} />
+        <link rel="canonical" href={canonicalUrl} key="canonical" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph */}
         <meta property="og:type" content={SEO.og.type} />
-        <meta property="og:url" content={SEO.og.url} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={SEO.og.image} />
