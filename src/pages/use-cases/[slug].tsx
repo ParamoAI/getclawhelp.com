@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { BUSINESS, SEO } from '@/config';
+import { BLOG_POSTS } from '@/config/blogPosts';
+import { CITIES } from '@/config/cities';
+import { INTEGRATIONS } from '@/config/integrations';
 import { USE_CASES, UseCase } from '@/config/useCases';
 
 import Layout from '@/components/Layout';
@@ -81,6 +84,40 @@ export default function UseCasePage({ useCase }: UseCasePageProps) {
               Book Your Free Call →
             </a>
           </div>
+
+          <h2>Connect Your Channels</h2>
+          <ul>
+            {INTEGRATIONS.slice(0, 5).map((int) => (
+              <li key={int.slug}>
+                <Link href={`/integrations/${int.slug}/`}>
+                  {int.icon} OpenClaw + {int.name}
+                </Link>
+                {' — '}{int.shortDescription}
+              </li>
+            ))}
+          </ul>
+
+          <h2>Guides &amp; Tutorials</h2>
+          <ul>
+            {BLOG_POSTS.slice(0, 3).map((post) => (
+              <li key={post.slug}>
+                <Link href={`/blog/${post.slug}/`}>
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <h2>Available in Your City</h2>
+          <ul>
+            {CITIES.slice(0, 4).map((city) => (
+              <li key={city.slug}>
+                <Link href={`/cities/${city.slug}/`}>
+                  📍 OpenClaw Setup in {city.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <h2>More Use Cases</h2>
           <ul>

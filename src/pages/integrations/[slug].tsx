@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { BUSINESS, SEO } from '@/config';
+import { BLOG_POSTS } from '@/config/blogPosts';
 import { INTEGRATIONS, Integration } from '@/config/integrations';
+import { USE_CASES } from '@/config/useCases';
 
 import Layout from '@/components/Layout';
 
@@ -77,6 +79,28 @@ export default function IntegrationPage({ integration }: IntegrationPageProps) {
               Book Your Free Call →
             </a>
           </div>
+
+          <h2>Popular Use Cases with {integration.name}</h2>
+          <ul>
+            {USE_CASES.slice(0, 4).map((uc) => (
+              <li key={uc.slug}>
+                <Link href={`/use-cases/${uc.slug}/`}>
+                  {uc.icon} {uc.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <h2>Guides &amp; Tutorials</h2>
+          <ul>
+            {BLOG_POSTS.slice(0, 3).map((post) => (
+              <li key={post.slug}>
+                <Link href={`/blog/${post.slug}/`}>
+                  {post.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
           <h2>Related Integrations</h2>
           <ul>

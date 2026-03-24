@@ -21,14 +21,19 @@ export const SEO = {
 
   keywords: [
     'OpenClaw setup',
-    'OpenClaw VPS install',
     'OpenClaw help',
+    'OpenClaw VPS setup',
     'install OpenClaw',
-    'OpenClaw server setup',
     'OpenClaw installation service',
+    'OpenClaw setup service',
     'OpenClaw skills',
     'OpenClaw configuration',
-    'AI assistant VPS',
+    'OpenClaw automation',
     'self-hosted AI assistant',
+    'AI assistant setup',
+    'OpenClaw Docker setup',
+    'OpenClaw for business',
+    'OpenClaw consultant',
+    'get OpenClaw',
   ],
 } as const;
