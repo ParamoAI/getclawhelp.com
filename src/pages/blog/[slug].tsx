@@ -97,7 +97,7 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
 }
 
 // Slugs that have dedicated page files (not rendered by this dynamic route)
-const DEDICATED_PAGES = new Set(['openclaw-whatsapp-setup']);
+const DEDICATED_PAGES = new Set(['openclaw-whatsapp-setup', 'openclaw-slack-integration']);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = BLOG_POSTS.filter((post) => !DEDICATED_PAGES.has(post.slug)).map((post) => ({

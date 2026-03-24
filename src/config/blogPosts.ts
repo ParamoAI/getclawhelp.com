@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-slack-integration',
+    title: 'OpenClaw Slack Integration: Add AI to Your Workspace',
+    description:
+      'Connect OpenClaw to Slack step by step. Add a powerful AI assistant to your team workspace for automated workflows, instant answers, and 24/7 productivity.',
+    date: 'March 17, 2026',
+    readTime: '13 min read',
+  },
+  {
     slug: 'openclaw-whatsapp-setup',
     title: 'OpenClaw WhatsApp Setup: Talk to Your AI from Your Phone',
     description:
