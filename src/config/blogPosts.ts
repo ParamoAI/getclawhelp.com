@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-security-hardening',
+    title: 'OpenClaw Security Hardening: Protect Your AI',
+    description:
+      'Harden your OpenClaw deployment with this complete security guide. Covers SSH lockdown, firewall rules, token management, encryption, and production best practices.',
+    date: 'March 24, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-slack-integration',
     title: 'OpenClaw Slack Integration: Add AI to Your Workspace',
     description:
