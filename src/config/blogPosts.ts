@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-security-hardening',
+    title: 'OpenClaw Security Hardening: Protect Your AI Assistant',
+    description:
+      'Secure OpenClaw with practical hardening steps for access control, secrets, updates, firewalls, and monitoring before you put your AI assistant to work.',
+    date: 'April 7, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-slack-integration',
     title: 'OpenClaw Slack Integration: Add AI to Your Workspace',
     description:
