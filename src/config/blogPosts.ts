@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'hire-openclaw-expert',
+    title: 'Hire an OpenClaw Expert: What to Look For',
+    description:
+      'Need to hire an OpenClaw expert? Use this checklist to vet setup, security, integrations, pricing, and delivery before you trust someone with your AI assistant.',
+    date: 'April 14, 2026',
+    readTime: '13 min read',
+  },
+  {
     slug: 'openclaw-security-hardening',
     title: 'OpenClaw Security Hardening: Protect Your AI Assistant',
     description:
