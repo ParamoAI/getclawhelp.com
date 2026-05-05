@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-consultant',
+    title: "OpenClaw Consultant: When DIY Isn't Enough",
+    description:
+      'Need an OpenClaw consultant? Learn when DIY stops making sense, what a consultant should deliver, and how to choose the right setup partner.',
+    date: 'May 5, 2026',
+    readTime: '13 min read',
+  },
+  {
     slug: 'hire-openclaw-expert',
     title: 'Hire an OpenClaw Expert: What to Look For',
     description:
