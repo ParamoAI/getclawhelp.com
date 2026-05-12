@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-consultant',
+    title: "OpenClaw Consultant: When DIY Isn't Enough",
+    description:
+      'Need an OpenClaw consultant? Learn when expert help saves time, reduces risk, and gets your AI assistant into production faster.',
+    date: 'May 12, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-slack-integration',
     title: 'OpenClaw Slack Integration: Add AI to Your Workspace',
     description:
