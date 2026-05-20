@@ -98,6 +98,8 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
 
 // Slugs that have dedicated page files (not rendered by this dynamic route)
 const DEDICATED_PAGES = new Set([
+  'hire-openclaw-expert',
+  'openclaw-consultant',
   'openclaw-whatsapp-setup',
   'openclaw-slack-integration',
   'openclaw-security-hardening',

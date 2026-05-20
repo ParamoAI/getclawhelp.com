@@ -8,6 +8,22 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-consultant',
+    title: "OpenClaw Consultant: When DIY Isn't Enough",
+    description:
+      'Need an OpenClaw consultant? Learn when DIY stops making sense, what a consultant should deliver, and how to choose the right expert for setup, security, and automation.',
+    date: 'May 20, 2026',
+    readTime: '14 min read',
+  },
+  {
+    slug: 'hire-openclaw-expert',
+    title: 'Hire an OpenClaw Expert: What to Look For',
+    description:
+      'Need to hire an OpenClaw expert? Learn how to vet setup, security, Docker, VPS, and automation experience before you trust someone with your AI assistant.',
+    date: 'April 21, 2026',
+    readTime: '13 min read',
+  },
+  {
     slug: 'openclaw-security-hardening',
     title: 'OpenClaw Security Hardening: Protect Your AI Assistant',
     description:
