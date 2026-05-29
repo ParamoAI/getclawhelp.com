@@ -104,6 +104,7 @@ const DEDICATED_PAGES = new Set([
   'openclaw-slack-integration',
   'openclaw-security-hardening',
   'openclaw-help',
+  'openclaw-consultant',
 ]);
 
 export const getStaticPaths: GetStaticPaths = async () => {
