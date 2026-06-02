@@ -104,6 +104,7 @@ const DEDICATED_PAGES = new Set([
   'openclaw-slack-integration',
   'openclaw-security-hardening',
   'openclaw-help',
+  'openclaw-support',
   'openclaw-consultant',
 ]);
 

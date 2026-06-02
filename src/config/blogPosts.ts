@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-support',
+    title: 'OpenClaw Support: Getting Unstuck Fast',
+    description:
+      'Need OpenClaw support? Learn the fastest path to fixes, what support should include, and when to get expert help for setup, bugs, and security.',
+    date: 'June 2, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-help',
     title: 'OpenClaw Help: Troubleshooting Common Setup Issues',
     description:
