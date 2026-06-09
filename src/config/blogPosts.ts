@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-cost-optimization',
+    title: 'How to Reduce OpenClaw Token Costs by 60%',
+    description:
+      'Learn practical OpenClaw cost optimization tactics: prompt caching, session pruning, model routing, and output controls that cut token spend fast.',
+    date: 'June 9, 2026',
+    readTime: '15 min read',
+  },
+  {
     slug: 'openclaw-support',
     title: 'OpenClaw Support: Getting Unstuck Fast',
     description:
