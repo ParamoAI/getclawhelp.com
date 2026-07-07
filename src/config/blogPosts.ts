@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-for-small-business',
+    title: 'OpenClaw for Small Business: Automate Without a Tech Team',
+    description:
+      'See how small businesses use OpenClaw to automate support, scheduling, research, and ops without hiring a full internal engineering team.',
+    date: 'July 7, 2026',
+    readTime: '15 min read',
+  },
+  {
     slug: 'openclaw-support',
     title: 'OpenClaw Support: Getting Unstuck Fast',
     description:
