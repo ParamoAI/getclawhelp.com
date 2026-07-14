@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-for-executives',
+    title: 'OpenClaw for Executives: Your AI Chief of Staff',
+    description:
+      'See how executives use OpenClaw as an AI chief of staff for meeting prep, follow-ups, research, and cross-channel coordination on infrastructure they control.',
+    date: 'July 14, 2026',
+    readTime: '15 min read',
+  },
+  {
     slug: 'openclaw-for-small-business',
     title: 'OpenClaw for Small Business: Automate Without a Tech Team',
     description:
