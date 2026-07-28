@@ -13,6 +13,7 @@ interface LayoutProps {
   title?: string;
   description?: string;
   canonicalPath?: string;
+  ogType?: 'website' | 'article';
 }
 
 export default function Layout({
@@ -20,6 +21,7 @@ export default function Layout({
   title,
   description = SEO.description.default,
   canonicalPath,
+  ogType = SEO.og.type,
 }: LayoutProps) {
   const pageTitle = SEO.formatTitle(title);
   const canonicalUrl = canonicalPath ? `${BUSINESS.url}${canonicalPath}` : BUSINESS.url;
@@ -35,7 +37,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph */}
-        <meta property="og:type" content={SEO.og.type} />
+        <meta property="og:type" content={ogType} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
