@@ -145,11 +145,11 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'openclaw-mac-mini-setup',
-    title: 'Run OpenClaw on a Mac Mini: Home Server Setup',
+    title: 'How to Set Up OpenClaw on a Mac Mini: Complete Guide',
     description:
-      'Set up OpenClaw on a Mac Mini for a private, always-on AI assistant running in your home.',
-    date: 'February 18, 2026',
-    readTime: '11 min read',
+      'Learn how to set up OpenClaw on a Mac Mini with the right hardware, Docker stack, network setup, and security baseline for a stable home server.',
+    date: 'July 28, 2026',
+    readTime: '16 min read',
   },
   {
     slug: 'openclaw-docker-setup',
