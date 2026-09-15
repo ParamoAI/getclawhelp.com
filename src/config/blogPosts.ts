@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-docker-compose-production',
+    title: 'OpenClaw Docker Compose: Multi-Container Production Setup',
+    description:
+      'Build a production-ready OpenClaw Docker setup with Compose, persistent volumes, health checks, safer updates, and tighter host security.',
+    date: 'September 15, 2026',
+    readTime: '15 min read',
+  },
+  {
     slug: 'openclaw-for-executives',
     title: 'OpenClaw for Executives: Your AI Chief of Staff',
     description:
