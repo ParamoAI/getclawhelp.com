@@ -3,6 +3,7 @@
 - Publishes the scheduled "OpenClaw Docker Compose: Multi-Container Production Setup" blog post.
 - Adds the post to `BLOG_POSTS`, marks it as a dedicated blog page, and includes Article + FAQ schema.
 - Regenerates the static export in `docs/`, including the sitemap entry for the new post.
+- Sets the article publish date to September 22, 2026.
 
 ## Verification
 
