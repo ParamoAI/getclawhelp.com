@@ -13,7 +13,7 @@ export default function OpenClawDockerComposeProduction() {
   const description =
     'Build a production-ready OpenClaw Docker setup with Compose, persistent volumes, health checks, safer updates, and tighter host security.';
   const slug = 'openclaw-docker-compose-production';
-  const date = 'September 22, 2026';
+  const date = 'September 29, 2026';
   const readTime = '15 min read';
 
   const faqs = [
@@ -49,8 +49,8 @@ export default function OpenClawDockerComposeProduction() {
     '@type': 'Article',
     headline: title,
     description,
-    datePublished: '2026-09-22',
-    dateModified: '2026-09-22',
+    datePublished: '2026-09-29',
+    dateModified: '2026-09-29',
     author: {
       '@type': 'Organization',
       name: BUSINESS.name,
