@@ -8,6 +8,30 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-docker-compose-production',
+    title: 'OpenClaw Docker Compose: Multi-Container Production Setup',
+    description:
+      'Build a production-ready OpenClaw Docker setup with Compose, persistent volumes, health checks, safer updates, and tighter host security.',
+    date: 'September 29, 2026',
+    readTime: '15 min read',
+  },
+  {
+    slug: 'openclaw-for-executives',
+    title: 'OpenClaw for Executives: Your AI Chief of Staff',
+    description:
+      'See how executives use OpenClaw as an AI chief of staff for meeting prep, follow-ups, research, and cross-channel coordination on infrastructure they control.',
+    date: 'July 14, 2026',
+    readTime: '15 min read',
+  },
+  {
+    slug: 'openclaw-for-small-business',
+    title: 'OpenClaw for Small Business: Automate Without a Tech Team',
+    description:
+      'See how small businesses use OpenClaw to automate support, scheduling, research, and ops without hiring a full internal engineering team.',
+    date: 'July 7, 2026',
+    readTime: '15 min read',
+  },
+  {
     slug: 'openclaw-support',
     title: 'OpenClaw Support: Getting Unstuck Fast',
     description:
