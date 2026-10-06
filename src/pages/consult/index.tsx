@@ -1,7 +1,4 @@
-import Head from 'next/head';
-import Link from 'next/link';
-
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 
 import Layout from '@/components/Layout';
 
@@ -23,15 +20,7 @@ export default function Consult() {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/consult/`} />
-        <meta property="og:url" content={`${BUSINESS.url}/consult/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} canonicalPath="/consult/">
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.container}>

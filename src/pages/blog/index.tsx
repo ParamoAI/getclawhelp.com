@@ -1,7 +1,5 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
 import { BLOG_POSTS } from '@/config/blogPosts';
 
 import Layout from '@/components/Layout';
@@ -15,15 +13,7 @@ export default function BlogIndex() {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/blog/`} />
-        <meta property="og:url" content={`${BUSINESS.url}/blog/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} canonicalPath="/blog/">
         <div className={styles.pageHeader}>
           <div className={styles.container}>
             <h1>Blog</h1>

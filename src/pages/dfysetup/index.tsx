@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 
 import Layout from '@/components/Layout';
 import StructuredData from '@/components/StructuredData';
@@ -142,22 +142,10 @@ export default function DfySetup() {
   return (
     <>
       <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
         <meta
           name="keywords"
           content="OpenClaw setup service, done for you OpenClaw, OpenClaw installation, OpenClaw VPS setup, AI assistant setup, OpenClaw configuration service"
         />
-        <link rel="canonical" href={`${BUSINESS.url}/dfysetup/`} />
-        <meta property="og:url" content={`${BUSINESS.url}/dfysetup/`} />
-        <meta property="og:title" content={`${title} | ${BUSINESS.name}`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={`${BUSINESS.url}/og-image.png`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${title} | ${BUSINESS.name}`} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={`${BUSINESS.url}/og-image.png`} />
-        <meta name="twitter:site" content={BUSINESS.social.twitter} />
         <StructuredData type="service" data={serviceSchema} />
         <StructuredData type="faq" data={faqSchema} />
         <StructuredData type="breadcrumb" data={breadcrumbSchema} />
@@ -165,7 +153,7 @@ export default function DfySetup() {
       <Script id="meta-pixel-dfysetup" strategy="afterInteractive">
         {`if(typeof fbq!=='undefined'){fbq('init','1993957208166087');fbq('track','PageView');}`}
       </Script>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} canonicalPath="/dfysetup/">
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.container}>

@@ -2,8 +2,6 @@ import { useState, FormEvent } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
-import { BUSINESS, SEO } from '@/config';
-
 import Layout from '@/components/Layout';
 
 import styles from '@/styles/DfySetupOnboarding.module.css';
@@ -130,18 +128,12 @@ export default function DfySetupOnboarding() {
   return (
     <>
       <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="canonical" href={`${BUSINESS.url}/dfysetup/onboarding/`} />
-        <meta property="og:url" content={`${BUSINESS.url}/dfysetup/onboarding/`} />
-        <meta property="og:title" content={`${title} | ${BUSINESS.name}`} />
-        <meta property="og:description" content={description} />
       </Head>
       <Script id="meta-pixel-dfysetup-onboarding" strategy="afterInteractive">
         {`if(typeof fbq!=='undefined'){fbq('init','1993957208166087');fbq('track','PageView');fbq('track','Purchase',{value:247.00,currency:'USD'});}`}
       </Script>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} canonicalPath="/dfysetup/onboarding/">
         {/* Hero */}
         <section className={styles.hero}>
           <div>

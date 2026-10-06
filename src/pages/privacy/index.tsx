@@ -1,7 +1,6 @@
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 
 import Layout from '@/components/Layout';
 
@@ -13,12 +12,7 @@ export default function Privacy() {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/privacy/`} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout title={title} description={description} canonicalPath="/privacy/">
         <div className={styles.container}>
           <Link href="/" className={styles.back}>
             ← Back to GetClawHelp
