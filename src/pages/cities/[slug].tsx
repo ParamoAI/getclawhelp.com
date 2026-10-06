@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 import { BLOG_POSTS } from '@/config/blogPosts';
 import { CITIES, City } from '@/config/cities';
 import { USE_CASES } from '@/config/useCases';
@@ -57,19 +57,17 @@ export default function CityPage({ city, relatedCities }: CityPageProps) {
   return (
     <>
       <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/cities/${city.slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/cities/${city.slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
         />
       </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/cities/${city.slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/" className={styles.back}>
             ← Back to Home

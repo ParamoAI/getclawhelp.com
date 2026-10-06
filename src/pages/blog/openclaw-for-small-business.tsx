@@ -9,7 +9,6 @@ import styles from '@/styles/Blog.module.css';
 
 export default function OpenClawForSmallBusiness() {
   const title = 'OpenClaw for Small Business: Automate Without a Tech Team';
-  const metaTitle = 'OpenClaw for Small Business | GetClawHelp';
   const description =
     'See how small businesses use OpenClaw to automate support, scheduling, research, and ops without hiring a full internal engineering team.';
   const slug = 'openclaw-for-small-business';
@@ -83,16 +82,6 @@ export default function OpenClawForSmallBusiness() {
   return (
     <>
       <Head>
-        <title>{metaTitle}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/blog/${slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/blog/${slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -102,7 +91,12 @@ export default function OpenClawForSmallBusiness() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/blog/${slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/blog/" className={styles.back}>
             ← Back to Blog

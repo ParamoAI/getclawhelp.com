@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 import { BLOG_POSTS, BlogPost } from '@/config/blogPosts';
 
 import Layout from '@/components/Layout';
@@ -19,19 +18,12 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/blog/${post.slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/blog/${post.slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/blog/${post.slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/blog/" className={styles.back}>
             ← Back to Blog
@@ -98,16 +90,31 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
 
 // Slugs that have dedicated page files (not rendered by this dynamic route)
 const DEDICATED_PAGES = new Set([
+  'openclaw-cost-optimization',
+  'automate-customer-support-ai',
+  'ai-sales-assistant-openclaw',
+  'openclaw-small-business-automation',
+  'openclaw-vs-chatgpt',
+  'openclaw-automation-ideas',
+  'openclaw-vps-setup-guide',
+  'openclaw-mac-mini-setup',
   'openclaw-for-executives',
   'openclaw-for-small-business',
   'hire-openclaw-expert',
   'openclaw-consultant',
+  'openclaw-security-hardening',
+  'openclaw-telegram-setup',
+  'what-is-an-api-explained-for-non-technical-people',
   'openclaw-whatsapp-setup',
   'openclaw-slack-integration',
-  'openclaw-security-hardening',
+  'openclaw-docker-setup',
+  'openclaw-vps-deployment',
+  'openclaw-setup-service',
   'openclaw-help',
   'openclaw-support',
-  'openclaw-consultant',
+  'what-is-openclaw',
+  'openclaw-mac-mini-m4-vs-m2',
+  'openclaw-docker-compose-production-setup',
 ]);
 
 export const getStaticPaths: GetStaticPaths = async () => {

@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 import { BLOG_POSTS } from '@/config/blogPosts';
 import { CITIES } from '@/config/cities';
 import { INTEGRATIONS } from '@/config/integrations';
@@ -22,16 +21,12 @@ export default function UseCasePage({ useCase }: UseCasePageProps) {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/use-cases/${useCase.slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/use-cases/${useCase.slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/use-cases/${useCase.slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/" className={styles.back}>
             ← Back to Home

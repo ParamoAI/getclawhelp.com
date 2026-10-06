@@ -8,6 +8,30 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-docker-compose-production-setup',
+    title: 'OpenClaw Docker Compose: Multi-Container Production Setup',
+    description:
+      'Build a production-ready OpenClaw Docker Compose setup with services, networks, volumes, secrets, reverse proxy, backups, and update discipline.',
+    date: 'October 6, 2026',
+    readTime: '15 min read',
+  },
+  {
+    slug: 'openclaw-mac-mini-m4-vs-m2',
+    title: 'OpenClaw Mac Mini Setup: M4 vs M2 Performance Comparison',
+    description:
+      'Compare M4 vs M2 Mac Mini options for OpenClaw, including CPU, memory, ports, and hosting tradeoffs before you buy or upgrade.',
+    date: 'August 25, 2026',
+    readTime: '14 min read',
+  },
+  {
+    slug: 'openclaw-cost-optimization',
+    title: 'How to Reduce OpenClaw Token Costs by 60%',
+    description:
+      'Learn practical ways to reduce OpenClaw token costs with prompt caching, model routing, async workloads, and workflow design that avoids waste.',
+    date: 'July 21, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-for-executives',
     title: 'OpenClaw for Executives: Your AI Chief of Staff',
     description:
@@ -161,11 +185,11 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'openclaw-mac-mini-setup',
-    title: 'Run OpenClaw on a Mac Mini: Home Server Setup',
+    title: 'How to Set Up OpenClaw on a Mac Mini: Complete Guide',
     description:
-      'Set up OpenClaw on a Mac Mini for a private, always-on AI assistant running in your home.',
-    date: 'February 18, 2026',
-    readTime: '11 min read',
+      'Learn how to set up OpenClaw on a Mac Mini with the right hardware, Docker stack, network setup, and security baseline for a stable home server.',
+    date: 'July 28, 2026',
+    readTime: '16 min read',
   },
   {
     slug: 'openclaw-docker-setup',

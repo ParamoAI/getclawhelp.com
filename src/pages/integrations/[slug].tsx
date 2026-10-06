@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 
-import { BUSINESS, SEO } from '@/config';
+import { BUSINESS } from '@/config';
 import { BLOG_POSTS } from '@/config/blogPosts';
 import { INTEGRATIONS, Integration } from '@/config/integrations';
 import { USE_CASES } from '@/config/useCases';
@@ -21,16 +20,12 @@ export default function IntegrationPage({ integration }: IntegrationPageProps) {
 
   return (
     <>
-      <Head>
-        <title>{SEO.formatTitle(title)}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/integrations/${integration.slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/integrations/${integration.slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-      </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/integrations/${integration.slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/" className={styles.back}>
             ← Back to Home

@@ -9,7 +9,6 @@ import styles from '@/styles/Blog.module.css';
 
 export default function OpenClawForExecutives() {
   const title = 'OpenClaw for Executives: Your AI Chief of Staff';
-  const metaTitle = 'OpenClaw for Executives | GetClawHelp';
   const description =
     'See how executives use OpenClaw as an AI chief of staff for meeting prep, follow-ups, research, and cross-channel coordination on infrastructure they control.';
   const slug = 'openclaw-for-executives';
@@ -83,16 +82,6 @@ export default function OpenClawForExecutives() {
   return (
     <>
       <Head>
-        <title>{metaTitle}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`${BUSINESS.url}/blog/${slug}/`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`${BUSINESS.url}/blog/${slug}/`} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -102,7 +91,12 @@ export default function OpenClawForExecutives() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </Head>
-      <Layout title={title} description={description}>
+      <Layout
+        title={title}
+        description={description}
+        canonicalPath={`/blog/${slug}/`}
+        ogType="article"
+      >
         <article className={styles.article}>
           <Link href="/blog/" className={styles.back}>
             ← Back to Blog
