@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'openclaw-security-mistakes',
+    title: '5 Security Mistakes Everyone Makes with OpenClaw',
+    description:
+      'Avoid common OpenClaw security hardening mistakes with practical fixes for secrets, access, updates, tools, logging, and exposed services.',
+    date: 'October 13, 2026',
+    readTime: '14 min read',
+  },
+  {
     slug: 'openclaw-docker-compose-production-setup',
     title: 'OpenClaw Docker Compose: Multi-Container Production Setup',
     description:

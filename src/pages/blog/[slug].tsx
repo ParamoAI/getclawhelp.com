@@ -115,6 +115,7 @@ const DEDICATED_PAGES = new Set([
   'what-is-openclaw',
   'openclaw-mac-mini-m4-vs-m2',
   'openclaw-docker-compose-production-setup',
+  'openclaw-security-mistakes',
 ]);
 
 export const getStaticPaths: GetStaticPaths = async () => {
